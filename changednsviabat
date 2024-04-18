@@ -1,0 +1,9 @@
+@ECHO OFF
+netsh interface ip add dns name="Ethernet 5" addr=10.192.2.35 index=1
+netsh interface ip add dns name="Ethernet 5" addr=10.192.2.34
+ipconfig /all | findstr /c:"10.192.2.35"
+ipconfig /all | findstr /c:"10.192.2.34"
+pause
+msg * "https://github.com/DitohartoPramudya"
+goto end
+:end
